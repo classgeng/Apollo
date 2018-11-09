@@ -8,14 +8,14 @@ tar -xvf zookeeper-3.4.10.tar.gz
 cd /usr/local/zookeeper-3.4.10
 mkdir data logs
 ### 第四步：修改配置
-cd /usr/local/zookeeper-3.4.10/conf
-cp zoo_sample.cfg zoo.cfg
-vim zoo.cfg
-修改内容：
-数据文件夹
-dataDir=/usr/local/zookeeper-3.4.10/data
-日志文件夹
-dataLogDir=/usr/local/zookeeper-3.4.10/logs
-客户端访问的端口号
-clientPort=2181
+#### cd /usr/local/zookeeper-3.4.10/conf
+#### cp zoo_sample.cfg zoo.cfg
+#### vim zoo.cfg
+#### 修改内容：
+#### 数据文件夹
+#### dataDir=/usr/local/zookeeper-3.4.10/data
+#### 日志文件夹
+#### dataLogDir=/usr/local/zookeeper-3.4.10/logs
+#### 客户端访问的端口号
+#### clientPort=2181
 
