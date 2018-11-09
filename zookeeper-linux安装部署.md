@@ -18,4 +18,21 @@ dataDir=/usr/local/zookeeper-3.4.10/data
 dataLogDir=/usr/local/zookeeper-3.4.10/logs  
 #客户端访问的端口号  
 clientPort=2181  
-
+### 第五步：启动服务
+cd /usr/local/zookeeper-3.4.10/bin  
+启动 sh zkServer.sh start  
+    如打印如下信息则表明启动成功：  
+    ZooKeeper JMX enabled by default  
+    Using config: /usr/local/services/zookeeper/zookeeper-3.4.9/bin/../conf/zoo.cfg  
+    Starting zookeeper ... STARTED  
+重启 sh zkServer.sh restart  
+    如打印如下信息则表明重启成功：  
+    ZooKeeper JMX enabled by default  
+    Using config: /usr/local/services/zookeeper/zookeeper-3.4.9/bin/../conf/zoo.cfg  
+    ZooKeeper JMX enabled by default  
+    Using config: /usr/local/services/zookeeper/zookeeper-3.4.9/bin/../conf/zoo.cfg  
+    Stopping zookeeper ... STOPPED  
+    ZooKeeper JMX enabled by default  
+    Using config: /usr/local/services/zookeeper/zookeeper-3.4.9/bin/../conf/zoo.cfg  
+    Starting zookeeper ... STARTED  
+    
