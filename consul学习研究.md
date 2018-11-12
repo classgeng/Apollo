@@ -8,8 +8,10 @@ unzip consul_0.7.5_linux_amd64.zip
 ## 出现如下信息，说明安装成功：
   ![image](https://github.com/xfgeng666/Apollo/blob/master/images/20181109094705.png)
 ## 第四步：启动
-./consul agent -dev -ui -node=consul-dev -client=10.4.149.132
+nohup ./consul agent -dev -ui -node=consul-dev -client=10.4.149.132 >consul.log 2>&1 &
 ## 出现如下信息，说明启动成功：
   ![image](https://github.com/xfgeng666/Apollo/blob/master/images/20181109103125.png)
 然后浏览器访问：http://10.4.149.132:8500
  ![image](https://github.com/xfgeng666/Apollo/blob/master/images/20181109103153.png)
+## 第五步：查看consul信息
+consul numbers
