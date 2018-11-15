@@ -31,7 +31,7 @@ rabbitMQ安装成功。
 ```
 rabbitmq-plugins enable rabbitmq_management
 ```
-# RabbitMQ常用命令
+# 四、RabbitMQ常用命令
 ```
 查看服务状态：rabbitmqctl status
 关闭服务：rabbitmqctl stop
