@@ -26,10 +26,22 @@ path.data: /usr/local/elasticsearch/data		# index数据路径
 path.logs: /usr/local/elasticsearch/logs  	# 日志文件路径
 network.host: 0.0.0.0			# 主机IP 
 http.port: 9200				# 端口
+# 
+
+# 允许跨域访问
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+
 ```
 ## 集群配置
+集群配置，在单节点基础上要配置Cluster，Node，Discovery三个块的配置，具体新增配置如下：
 ```
-集群配置，在单节点基础上要配置Cluster，Node，Discovery三个块的配置。
+node.master: true       # 是否为集群的master机器
+node.data: true     # 是否作为数据节点 
+# 这个就是配置集群的时候要用的到了，[]中填上集群中其他集群的ip的地址，如果是master的话请把所有salve的机器地址填上 
+discovery.zen.ping.unicast.hosts: [“192.168.0.153”,”192.168.0.154”,”192.168.0.155”]
+# 关于这个值配置多少合适的话大家去搜一下，自己权衡一下集群，这里我用了3台机器模拟集群，所以填上2
+discovery.zen.minimum_master_nodes: 2
 ```
 # 创建esuser用户(root用户不能启动elasticsearch)
 ```
@@ -50,10 +62,10 @@ cd /usr/local/elasticsearch/bin
 意思是说你的进程不够用了。
 解决方案： 切到root 用户：进入到security目录下的limits.conf；
 执行命令 vim /etc/security/limits.conf 在文件的末尾添加下面的参数值：
-soft nofile 65536
-hard nofile 131072
-soft nproc 2048
-hard nproc 4096
+* soft nofile 65536
+* hard nofile 131072
+* soft nproc 2048
+* hard nproc 4096
 前面的*符号必须带上，然后重新启动就可以了。
 执行完成后可以使用命令 ulimit -n 查看进程数 。
 
