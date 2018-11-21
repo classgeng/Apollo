@@ -107,20 +107,20 @@ connect: {
 }
 ```
 ### 修改 vim _site/app.js 文件
-修改head的连接地址: 
-this.base_uri = this.config.base_uri || this.prefs.get(“app-base_uri”) || “http://localhost:9200“; 
-修改成ElasticSearch的机器地址 
+修改head的连接地址:   
+this.base_uri = this.config.base_uri || this.prefs.get(“app-base_uri”) || “http://localhost:9200“;   
+修改成ElasticSearch的机器地址   
 this.base_uri = this.config.base_uri || this.prefs.get(“app-base_uri”) || “http://192.168.0.153:9200“;
 
 ## 启动
 修改完成你就可以启动head插件了：在 elasticsearch-head-master下启动服务
 ```
-cd  elasticsearch-head-master
+cd elasticsearch-head-master
 grunt server &  #后台启动
 ```
 ## 验证
 访问地址：http://192.168.0.153:9100 
-如果你在浏览器中访问不了http://192.168.0.153:9100/请检查防火墙是否关闭。 
+如果你在浏览器中访问不了，请检查防火墙是否关闭。 
 
 # 参考地址
 https://blog.csdn.net/chenxun_2010/article/details/78437852
