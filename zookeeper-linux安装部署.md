@@ -27,7 +27,7 @@ cd /usr/local/zookeeper-3.4.10/bin
     ZooKeeper JMX enabled by default  
     Using config: /usr/local/services/zookeeper/zookeeper-3.4.9/bin/../conf/zoo.cfg  
     Starting zookeeper ... STARTED 
-    ```
+    ```  
 重启 sh zkServer.sh restart  
     如打印如下信息则表明重启成功：  
     ```
